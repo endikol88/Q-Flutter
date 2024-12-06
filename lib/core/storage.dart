@@ -1,0 +1,1 @@
+// hafızaya kalici yazip/okuma islerimiz burada yapicaz

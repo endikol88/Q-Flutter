@@ -1,0 +1,1 @@
+// uygulama sayfaları ve navigasyon isimlerini burada tanımlıyıcaz

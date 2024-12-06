@@ -1,0 +1,2 @@
+// buraya dilleri yazıcaz
+// eger kaç dil destekliyorsak
