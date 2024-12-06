@@ -13,16 +13,16 @@ class LoadingScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // Logo ve yükleme göstergesi bölümü
-          Container(
+          SizedBox(
             width: double.infinity,
             child: Column(
               children: [
                 // Logo bölümü
-                Container(
+                SizedBox(
                   width: 150,
                   height: 150,
                   child: Image.asset(
-                    'assets/images/logo.png',
+                    'assets/images/logo.webp',
                     fit: BoxFit.contain,
                   ),
                 ),
