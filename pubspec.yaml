@@ -13,6 +13,8 @@ dependencies:
   flutter_secure_storage: ^9.2.2 # Güvenli veri depolama için
   go_router: ^14.6.1            # Sayfa yönlendirme (routing) için
   shared_preferences: ^2.3.3     # Basit veri depolama için
+  json_editor: ^0.0.8
+  lottie: ^3.1.3
 
 dev_dependencies:
   flutter_test:
@@ -22,13 +24,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true    # Material Design widget'larını kullanmak için
   assets:                       # Projedeki dosya kaynakları
-     - assets/images/
-
-     - assets/icons/
-
-     - assets/languages/
-
-     - assets/motions/
-
-     - assets/fonts/
-
+    - lib/assets/images/           # Görseller için
+    - lib/assets/icons/           # İkonlar için
+    - lib/assets/languages/       # Dil dosyaları için
+    - lib/assets/motions/        # Animasyon dosyaları için
