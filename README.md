@@ -12,7 +12,7 @@ A new Flutter project.
 
 ## Proje Hakkında
 
-[Projenin kısa tanımı ve amacı buraya yazılacak]
+projenin asıl amacı oyun dünyasındaki haberleri kullanıcıya göstermek 
 
   
 
@@ -24,17 +24,16 @@ A new Flutter project.
 
 -  **Takım Üyeleri:**
 
-- X [GitHub](GitHub linki)
+- ahmet emre kara [https://github.com/endikol88]
 
   
 
 ## Özellikler
 
-- [Ana özellik 1]
+- [haberlere hızlı erişim]
 
-- [Ana özellik 2]
+- [ileri zamanlarda bir blok uygulaması]
 
-- [Ana özellik 3]
 
   
 
@@ -126,8 +125,8 @@ lib/
 
 ## Ekran Görüntüleri
 
-[Uygulama ekran görüntüleri buraya eklenecek]
-
+![alt text](image.png)
+![alt text](3.png)
   
 
 ## Projeye Katkı Sağlama
@@ -152,7 +151,7 @@ lib/
 
 ## İletişim
 
-- Proje Bağlantısı: [GitHub repository linki]
+- Proje Bağlantısı: [https://github.com/endikol88/Q-Flutter.git]
 
 - İstinye Üniversitesi: [https://www.istinye.edu.tr/](https://www.istinye.edu.tr/)
 
