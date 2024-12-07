@@ -29,5 +29,3 @@ flutter:
     - lib/assets/languages/       # Dil dosyaları için
     - lib/assets/motions/        # Animasyon dosyaları için,
     - lib/assets/motions
-dependencies:
-  go_router:
