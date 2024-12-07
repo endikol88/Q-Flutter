@@ -127,7 +127,7 @@ lib/
 
 ![alt text](image.png)
 ![alt text](3.png)
-  
+![alt text](image-1.png) görsele basıldığı zaman linke gitme
 
 ## Projeye Katkı Sağlama
 
