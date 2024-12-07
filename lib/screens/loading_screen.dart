@@ -36,7 +36,7 @@ class LoadingScreen extends StatelessWidget {
               child: const Text(
                 "Devam Et",
                 style: TextStyle(
-                  color: Colors.blue,
+                  color: Colors.red,
                   fontSize: 18,
                 ),
               ),
