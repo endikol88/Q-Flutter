@@ -6,39 +6,107 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFF121212), // Siyah arka plan
       appBar: AppBar(
-        title: const Text('Profile'),
-        backgroundColor: Colors.blue,
+        title: const Text('Profil'),
+        backgroundColor: const Color(0xFF1E1E1E), // AppBar koyu renk
       ),
-      body: Center(
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Icon(
-              Icons.person,
-              size: 100,
-              color: Colors.blue,
+            // Profil fotoğrafı
+            const CircleAvatar(
+              radius: 60,
+              backgroundColor: Colors.blue,
+              child: Icon(
+                Icons.person,
+                size: 60,
+                color: Colors.white,
+              ),
             ),
             const SizedBox(height: 20),
+
+            // İsim ve detaylar
             const Text(
               'Ahmet Emre Kara',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
             ),
             const SizedBox(height: 10),
             const Text(
               'Okul Numarası: 2320161155',
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.white70,
+              ),
             ),
             const SizedBox(height: 5),
             const Text(
               'Bölüm: Bilgisayar Programcılığı',
-              style: TextStyle(fontSize: 18),
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.white70,
+              ),
+            ),
+            const Divider(
+              color: Colors.white30,
+              height: 40,
+              thickness: 1,
+            ),
+
+            // Ek bilgiler
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Hakkında:',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            const SizedBox(height: 10),
+            const Text(
+              'Merhaba! Ben Ahmet Emre Kara, Bilgisayar Programcılığı bölümü öğrencisiyim. Yazılım geliştirme, mobil uygulamalar ve yapay zeka konularına ilgi duyuyorum.',
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.white70,
+                height: 1.5,
+              ),
             ),
             const SizedBox(height: 30),
+
+            // İletişim ve butonlar
+            ElevatedButton.icon(
+              onPressed: () {
+                // İletişim butonu
+              },
+              icon: const Icon(Icons.email, color: Colors.white),
+              label: const Text('E-posta Gönder'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                textStyle: const TextStyle(fontSize: 16),
+              ),
+            ),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Navigator.pop(context); // Ana ekrana dönmek için
+                Navigator.pop(context); // Ana sayfaya dön
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF1E1E1E),
+                foregroundColor: Colors.white,
+                side: const BorderSide(color: Colors.blue),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              ),
               child: const Text('Ana Sayfaya Dön'),
             ),
           ],

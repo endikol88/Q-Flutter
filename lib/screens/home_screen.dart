@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'search_screen.dart';  // SearchScreen dosyasını içeri aktar
+import 'profile_screen.dart';  // ProfileScreen dosyasını içeri aktar
+import 'notification_screen.dart';  // NotificationScreen dosyasını içeri aktar
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,59 +13,44 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: const Color.fromARGB(221, 37, 37, 37),
       // AppBar
       appBar: AppBar(
-        title: const Text('Ana Sayfa'),
+        title: const Text(
+          'Ana Sayfa',
+          style: TextStyle(
+            color: Color.fromARGB(179, 0, 0, 0),  // Daha az parlak beyaz renk
+          ),
+        ),
         actions: [
+          // Keşfet ikonuna tıklanırsa, Keşfet ekranına yönlendirecek
+          IconButton(
+            icon: const Icon(CupertinoIcons.search),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SearchScreen()),  // Keşfet ekranına yönlendir
+              );
+            },
+          ),
+          // Profil ikonuna tıklanırsa, Profil ekranına yönlendirecek
+          IconButton(
+            icon: const Icon(CupertinoIcons.person),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ProfileScreen()),  // Profil ekranına yönlendir
+              );
+            },
+          ),
+          // Bildirim çanı ikonu tıklanırsa, Bildirim ekranına yönlendirecek
           IconButton(
             icon: const Icon(CupertinoIcons.bell),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const NotificationScreen()),  // Bildirim ekranına yönlendir
+              );
+            },
           ),
         ],
-      ),
-
-      // Drawer (Yan Menü)
-      drawer: Drawer(
-        child: Column(
-          children: [
-            // Drawer Header
-            Container(
-              height: 200,
-              color: Colors.blue,
-              child: const Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    CupertinoIcons.person_circle,
-                    size: 80,
-                    color: Colors.white,
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    'Kullanıcı Adı',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            // Menü öğeleri
-            ListTile(
-              leading: const Icon(CupertinoIcons.home),
-              title: const Text('Ana Sayfa'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: const Icon(CupertinoIcons.settings),
-              title: const Text('Ayarlar'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        ),
       ),
 
       // Ana içerik
@@ -71,31 +59,13 @@ class HomeScreen extends StatelessWidget {
           Expanded(
             child: Container(
               padding: const EdgeInsets.all(16),
-              child: const Text('Ana Sayfa İçeriği'),
+              child: const Text(
+                'Ana Sayfa İçeriği',
+                style: TextStyle(color: Colors.white, fontSize: 18),
+              ),
             ),
           ),
         ],
-      ),
-
-      // Alt navigasyon çubuğu
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.home),
-            label: 'Ana Sayfa',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.search),
-            label: 'Keşfet',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.person),
-            label: 'Profil',
-          ),
-        ],
-        onTap: (index) {
-          // Navigasyon işlemleri buraya gelecek
-        },
       ),
     );
   }
