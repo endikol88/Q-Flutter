@@ -72,7 +72,7 @@ class NotificationScreen extends StatelessWidget {
       color: const Color(0xFF1E1E1E), // Koyu gri kart arka planı
       margin: const EdgeInsets.symmetric(vertical: 8),
       child: ListTile(
-        leading: Icon(icon, color: Colors.blue, size: 32), // İkon
+        leading: Icon(icon, color: const Color.fromARGB(255, 99, 28, 28),), // İkon
         title: Text(
           title,
           style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),

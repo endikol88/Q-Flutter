@@ -65,22 +65,22 @@ class SearchScreen extends StatelessWidget {
               children: [
                 Chip(
                   label: const Text('Teknoloji'),
-                  backgroundColor: Colors.green,
+                  backgroundColor: const Color.fromARGB(255, 99, 28, 28),
                   labelStyle: const TextStyle(color: Colors.white),
                 ),
                 Chip(
                   label: const Text('Bilim'),
-                  backgroundColor: Colors.green,
+                  backgroundColor: const Color.fromARGB(255, 99, 28, 28),
                   labelStyle: const TextStyle(color: Colors.white),
                 ),
                 Chip(
                   label: const Text('Sanat'),
-                  backgroundColor: Colors.green,
+                  backgroundColor: const Color.fromARGB(255, 99, 28, 28),
                   labelStyle: const TextStyle(color: Colors.white),
                 ),
                 Chip(
                   label: const Text('Eğlence'),
-                  backgroundColor: Colors.green,
+                  backgroundColor: const Color.fromARGB(255, 99, 28, 28),
                   labelStyle: const TextStyle(color: Colors.white),
                 ),
               ],
@@ -96,7 +96,7 @@ class SearchScreen extends StatelessWidget {
                 icon: const Icon(Icons.arrow_back, color: Colors.white),
                 label: const Text('Ana Sayfaya Dön'),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
+                  backgroundColor: const Color.fromARGB(255, 99, 28, 28),
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(
                     horizontal: 16,

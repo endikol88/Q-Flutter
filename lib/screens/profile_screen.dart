@@ -19,7 +19,7 @@ class ProfileScreen extends StatelessWidget {
             // Profil fotoğrafı
             const CircleAvatar(
               radius: 60,
-              backgroundColor: Colors.blue,
+              backgroundColor: const Color.fromARGB(255, 99, 28, 28),
               child: Icon(
                 Icons.person,
                 size: 60,
@@ -90,7 +90,7 @@ class ProfileScreen extends StatelessWidget {
               icon: const Icon(Icons.email, color: Colors.white),
               label: const Text('E-posta Gönder'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
+                backgroundColor: const Color.fromARGB(255, 99, 28, 28),
                 foregroundColor: Colors.white,
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 textStyle: const TextStyle(fontSize: 16),
@@ -104,7 +104,7 @@ class ProfileScreen extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF1E1E1E),
                 foregroundColor: Colors.white,
-                side: const BorderSide(color: Colors.blue),
+                side: const BorderSide(color: Color.fromARGB(255, 99, 28, 28)),
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               ),
               child: const Text('Ana Sayfaya Dön'),
