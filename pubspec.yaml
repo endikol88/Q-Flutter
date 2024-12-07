@@ -27,4 +27,7 @@ flutter:
     - lib/assets/images/           # Görseller için
     - lib/assets/icons/           # İkonlar için
     - lib/assets/languages/       # Dil dosyaları için
-    - lib/assets/motions/        # Animasyon dosyaları için
+    - lib/assets/motions/        # Animasyon dosyaları için,
+    - lib/assets/motions
+dependencies:
+  go_router:
