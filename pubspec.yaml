@@ -21,6 +21,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0         # Kod kalitesi kontrolleri için
+  flutter_launcher_icons: ^0.9.2 # Uygulama ikonları için paket
 
 flutter:
   uses-material-design: true    # Material Design widget'larını kullanmak için
@@ -28,5 +29,9 @@ flutter:
     - lib/assets/images/           # Görseller için
     - lib/assets/icons/           # İkonlar için
     - lib/assets/languages/       # Dil dosyaları için
-    - lib/assets/motions/        # Animasyon dosyaları için,
-    
+    - lib/assets/motions/        # Animasyon dosyaları için
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "lib/assets/icons/app_icon.png"  # İkonun dosya yolu
