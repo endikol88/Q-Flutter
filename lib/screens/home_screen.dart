@@ -4,6 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'search_screen.dart';
 import 'profile_screen.dart';
 import 'notification_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   final VoidCallback toggleTheme; // Tema değiştirme fonksiyonu
@@ -16,16 +17,23 @@ class HomeScreen extends StatelessWidget {
     bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
-      backgroundColor: isDarkMode ? const Color.fromARGB(255, 24, 23, 23) : const Color.fromARGB(255, 233, 232, 232),
+      backgroundColor: isDarkMode
+          ? const Color.fromARGB(255, 24, 23, 23)
+          : const Color.fromARGB(255, 233, 232, 232),
 
       // AppBar
       appBar: AppBar(
-        backgroundColor: isDarkMode ? const Color.fromARGB(255, 112, 6, 6) : const Color.fromARGB(255, 1, 28, 116),
+        backgroundColor: isDarkMode
+            ? const Color.fromARGB(255, 112, 6, 6)
+            : const Color.fromARGB(255, 1, 28, 116),
         title: Text(
           'Radeon',
-          style: TextStyle(
-            color: isDarkMode ? Colors.white : const Color.fromARGB(255, 255, 255, 255),
+          style: GoogleFonts.shareTech( // Share Tech entegrasyonu burada
+            color: isDarkMode
+                ? Colors.white
+                : const Color.fromARGB(255, 255, 255, 255),
             fontWeight: FontWeight.bold,
+            fontSize: 24,
           ),
         ),
         actions: [
@@ -75,9 +83,9 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               'Oyun Haberleri ve Güncel Bedava Oyunlar',
-              style: TextStyle(
-                color: isDarkMode ? const Color.fromARGB(255, 255, 255, 255) : Colors.black,
-                fontSize: 24,
+              style: GoogleFonts.shareTech( // Share Tech burada
+                color: isDarkMode ? Colors.white : Colors.black,
+                fontSize: 28,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -97,9 +105,9 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Gündemde Olan Oyunlar',
-                          style: TextStyle(
+                          style: GoogleFonts.shareTech( // Share Tech
                             color: isDarkMode ? Colors.white : Colors.black,
-                            fontSize: 18,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -110,16 +118,8 @@ class HomeScreen extends StatelessWidget {
                               gameInfo(
                                 title: 'Cyberpunk 2077: Phantom Liberty',
                                 description: 'Cyberpunk 2077\'nin yeni genişleme paketi Phantom Liberty, oyunculara yeni görevler, zenginleştirilmiş hikaye ve Dogtown adında yepyeni bir bölge sunuyor. Oyuncular, bu genişleme ile daha derin bir oyun deneyimi yaşayacaklar. Ayrıca, yeni karakter özelleştirmeleri ve iyileştirilmiş oyun mekaniği ile çok daha heyecanlı bir macera sizi bekliyor.',
-
                                 imagePath: 'lib/assets/images/cyberpunk2077.jpg',
                                 url: 'https://www.cyberpunk.net',
-                                isDarkMode: isDarkMode,
-                              ),
-                              gameInfo(
-                                title: 'Call of Duty Modern Warfare III',
-                                description: 'Call of Duty serisinin yeni oyunu Modern Warfare III, aksiyon dolu haritalar ve heyecan verici çok oyunculu modlar sunuyor. Oyuncular, yeni haritalarda mücadele ederken, hikayenin derinliklerine inerek savaşın arkasındaki karanlık sırları keşfedecekler. Ayrıca yeni silahlar ve taktikler ile düşmanlarınızı alt edebilirsiniz.',
-                                imagePath: 'lib/assets/images/codmw3.jpg',
-                                url: 'https://www.callofduty.com',
                                 isDarkMode: isDarkMode,
                               ),
                               gameInfo(
@@ -128,13 +128,21 @@ class HomeScreen extends StatelessWidget {
                                 imagePath: 'lib/assets/images/starfield.jpg',
                                 url: 'https://starfieldgame.com',
                                 isDarkMode: isDarkMode,
-  ),
+                             ),
                               gameInfo(
                                 title: 'GTA 6',
                                 description: 'GTA 6, Rockstar Games\'in merakla beklenen yeni oyunudur. Henüz resmi olarak duyurulmamış olsa da, oyun dünyasında söylentiler hızla yayılmakta. GTA 6, daha büyük bir harita, daha gelişmiş karakterler ve yeni hikayeler ile oyunculara unutulmaz bir deneyim sunmayı vaat ediyor. 2025 yılında çıkması bekleniyor.',
 
                                 imagePath: 'lib/assets/images/gta6.jpg',
                                 url: 'https://www.rockstargames.com/gta-6',
+                                isDarkMode: isDarkMode,
+                              ),
+
+                              gameInfo(
+                                title: 'Call of Duty Modern Warfare III',
+                                description: 'Call of Duty serisinin yeni oyunu Modern Warfare III, aksiyon dolu haritalar ve heyecan verici çok oyunculu modlar sunuyor. Oyuncular, yeni haritalarda mücadele ederken, hikayenin derinliklerine inerek savaşın arkasındaki karanlık sırları keşfedecekler.',
+                                imagePath: 'lib/assets/images/codmw3.jpg',
+                                url: 'https://www.callofduty.com',
                                 isDarkMode: isDarkMode,
                               ),
                             ],
@@ -154,9 +162,9 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Bedava Oyunlar',
-                          style: TextStyle(
+                          style: GoogleFonts.shareTech( // Share Tech
                             color: isDarkMode ? Colors.white : Colors.black,
-                            fontSize: 18,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -166,20 +174,12 @@ class HomeScreen extends StatelessWidget {
                             children: [
                               gameInfo(
                                 title: 'Control',
-                                description: 'Epic Games Store üzerinden bedava olarak sunuluyor. Control, Jesse Faden adında bir kadının, paranormal bir organizasyonu keşfederken yaşadığı gerilim dolu bir hikayeyi anlatıyor. Oyun, dinamik fizik ve gizemli atmosferiyle dikkat çekiyor. Control, aksiyon ve keşif sevenler için mükemmel bir seçenek.',
-
+                                description: 'Epic Games Store üzerinden bedava olarak sunuluyor. Control, Jesse Faden adında bir kadının, paranormal bir organizasyonu keşfederken yaşadığı gerilim dolu bir hikayeyi anlatıyor.',
                                 imagePath: 'lib/assets/images/control.jpg',
                                 url: 'https://www.epicgames.com/store/en-US/p/control',
                                 isDarkMode: isDarkMode,
                               ),
                                gameInfo(
-                               title: 'Assassin\'s Creed II',
-                               description: 'Assassin\'s Creed II, Ubisoft Store üzerinden ücretsiz. Oyun, İtalya\'nın Rönesans döneminde geçiyor ve baş karakter Ezio Auditore\'nin intikam arayışını konu alıyor. Serinin en popüler oyunlarından biri olan Assassin\'s Creed II, oyunculara büyüleyici bir açık dünya deneyimi ve mükemmel bir parkur mekanizması sunuyor.',
-                               imagePath: 'lib/assets/images/assassinscreed2.jpg',
-                                url: 'https://www.ubisoft.com/store/game/assassins-creed-ii',
-                                isDarkMode: isDarkMode,
-                              ),
-                              gameInfo(
                                 title: 'The Witcher Enhanced Edition',
                                 description: 'The Witcher Enhanced Edition, GOG üzerinden ücretsiz olarak sunuluyor. Geralt of Rivia\'nın maceralarına odaklanan bu RPG oyunu, derin hikayesi, heyecan verici dövüşleri ve karakter etkileşimleriyle çok büyük bir övgü aldı. Oyun, orijinal versiyonunun üzerine yapılan iyileştirmelerle daha da zenginleşmiş.',
                                 imagePath: 'lib/assets/images/witcher.jpg',
@@ -191,6 +191,14 @@ class HomeScreen extends StatelessWidget {
                                 description: 'Among Us, Steam üzerinden bedava olarak oynanabiliyor. Bu oyun, oyuncuların bir uzay gemisinde hayatta kalmaya çalışırken, aralarındaki sahtekarı bulmak için sosyal strateji ve iletişim becerilerini kullanmalarını sağlıyor. Çok oyunculu ve eğlenceli bir deneyim sunan Among Us, arkadaşlarınızla saatlerce eğlenebileceğiniz bir oyun.',
                                 imagePath: 'lib/assets/images/amongus.jpg',
                                 url: 'https://store.steampowered.com/app/945360/Among_Us/',
+                                isDarkMode: isDarkMode,
+                              ),
+
+                              gameInfo(
+                                title: 'Assassin\'s Creed II',
+                                description: 'Assassin\'s Creed II, Ubisoft Store üzerinden ücretsiz. Oyun, İtalya\'nın Rönesans döneminde geçiyor ve baş karakter Ezio Auditore\'nin intikam arayışını konu alıyor.',
+                                imagePath: 'lib/assets/images/assassinscreed2.jpg',
+                                url: 'https://www.ubisoft.com/store/game/assassins-creed-ii',
                                 isDarkMode: isDarkMode,
                               ),
                             ],
@@ -254,7 +262,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 8),
               Text(
                 title,
-                style: TextStyle(
+                style: GoogleFonts.shareTech( // Share Tech
                   color: isDarkMode ? Colors.white : Colors.black,
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
@@ -263,7 +271,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 4),
               Text(
                 description,
-                style: TextStyle(
+                style: GoogleFonts.shareTech(
                   color: isDarkMode ? Colors.white70 : Colors.black87,
                   fontSize: 14,
                 ),
@@ -275,4 +283,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
