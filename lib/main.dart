@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:flutter_app/core/themes.dart';
-import 'package:flutter_app/screens/login_screen.dart';
-import 'package:flutter_app/screens/loading_screen.dart';
-import 'package:flutter_app/screens/home_screen.dart';
-
+import 'package:radeon/core/themes.dart';
+import 'package:radeon/screens/login_screen.dart';
+import 'package:radeon/screens/loading_screen.dart';
+import 'package:radeon/screens/home_screen.dart';
 void main() {
   runApp(const MyApp());
 }
