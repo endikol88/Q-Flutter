@@ -123,6 +123,13 @@ class HomeScreen extends StatelessWidget {
                                 isDarkMode: isDarkMode,
                               ),
                               gameInfo(
+                                title: 'Starfield',
+                                description: 'Bethesda\'nın uzay temalı RPG oyunu Starfield, oyuncuları devasa bir evrenin derinliklerine götürüyor. Keşif, savaş, keşif ve hayatta kalma mekanikleri ile Starfield, bilim kurgu seven oyunculara müthiş bir deneyim sunuyor. Ayrıca, oyunun uzay gemisi özelleştirme ve gezegenler arası seyahat özellikleri de oldukça etkileyici.',
+                                imagePath: 'lib/assets/images/starfield.jpg',
+                                url: 'https://starfieldgame.com',
+                                isDarkMode: isDarkMode,
+  ),
+                              gameInfo(
                                 title: 'GTA 6',
                                 description: 'GTA 6, Rockstar Games\'in merakla beklenen oyunu...',
                                 imagePath: 'lib/assets/images/gta6.jpg',
@@ -161,6 +168,20 @@ class HomeScreen extends StatelessWidget {
                                 description: 'Epic Games Store üzerinden bedava...',
                                 imagePath: 'lib/assets/images/control.jpg',
                                 url: 'https://www.epicgames.com/store/en-US/p/control',
+                                isDarkMode: isDarkMode,
+                              ),
+                               gameInfo(
+                               title: 'Assassin\'s Creed II',
+                               description: 'Assassin\'s Creed II, Ubisoft Store üzerinden ücretsiz. Oyun, İtalya\'nın Rönesans döneminde geçiyor ve baş karakter Ezio Auditore\'nin intikam arayışını konu alıyor. Serinin en popüler oyunlarından biri olan Assassin\'s Creed II, oyunculara büyüleyici bir açık dünya deneyimi ve mükemmel bir parkur mekanizması sunuyor.',
+                               imagePath: 'lib/assets/images/assassinscreed2.jpg',
+                                url: 'https://www.ubisoft.com/store/game/assassins-creed-ii',
+                                isDarkMode: isDarkMode,
+                              ),
+                              gameInfo(
+                                title: 'The Witcher Enhanced Edition',
+                                description: 'The Witcher Enhanced Edition, GOG üzerinden ücretsiz olarak sunuluyor. Geralt of Rivia\'nın maceralarına odaklanan bu RPG oyunu, derin hikayesi, heyecan verici dövüşleri ve karakter etkileşimleriyle çok büyük bir övgü aldı. Oyun, orijinal versiyonunun üzerine yapılan iyileştirmelerle daha da zenginleşmiş.',
+                                imagePath: 'lib/assets/images/witcher.jpg',
+                                url: 'https://www.gog.com/game/the_witcher_enhanced_edition',
                                 isDarkMode: isDarkMode,
                               ),
                               gameInfo(
@@ -252,3 +273,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
