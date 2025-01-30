@@ -131,7 +131,8 @@ class HomeScreen extends StatelessWidget {
   ),
                               gameInfo(
                                 title: 'GTA 6',
-                                description: 'GTA 6, Rockstar Games\'in merakla beklenen oyunu...',
+                                description: 'GTA 6, Rockstar Games\'in merakla beklenen yeni oyunudur. Henüz resmi olarak duyurulmamış olsa da, oyun dünyasında söylentiler hızla yayılmakta. GTA 6, daha büyük bir harita, daha gelişmiş karakterler ve yeni hikayeler ile oyunculara unutulmaz bir deneyim sunmayı vaat ediyor. 2025 yılında çıkması bekleniyor.',
+
                                 imagePath: 'lib/assets/images/gta6.jpg',
                                 url: 'https://www.rockstargames.com/gta-6',
                                 isDarkMode: isDarkMode,
@@ -165,7 +166,8 @@ class HomeScreen extends StatelessWidget {
                             children: [
                               gameInfo(
                                 title: 'Control',
-                                description: 'Epic Games Store üzerinden bedava...',
+                                description: 'Epic Games Store üzerinden bedava olarak sunuluyor. Control, Jesse Faden adında bir kadının, paranormal bir organizasyonu keşfederken yaşadığı gerilim dolu bir hikayeyi anlatıyor. Oyun, dinamik fizik ve gizemli atmosferiyle dikkat çekiyor. Control, aksiyon ve keşif sevenler için mükemmel bir seçenek.',
+
                                 imagePath: 'lib/assets/images/control.jpg',
                                 url: 'https://www.epicgames.com/store/en-US/p/control',
                                 isDarkMode: isDarkMode,
@@ -186,7 +188,7 @@ class HomeScreen extends StatelessWidget {
                               ),
                               gameInfo(
                                 title: 'Among Us',
-                                description: 'Among Us, Steam üzerinden bedava...',
+                                description: 'Among Us, Steam üzerinden bedava olarak oynanabiliyor. Bu oyun, oyuncuların bir uzay gemisinde hayatta kalmaya çalışırken, aralarındaki sahtekarı bulmak için sosyal strateji ve iletişim becerilerini kullanmalarını sağlıyor. Çok oyunculu ve eğlenceli bir deneyim sunan Among Us, arkadaşlarınızla saatlerce eğlenebileceğiniz bir oyun.',
                                 imagePath: 'lib/assets/images/amongus.jpg',
                                 url: 'https://store.steampowered.com/app/945360/Among_Us/',
                                 isDarkMode: isDarkMode,
