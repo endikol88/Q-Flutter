@@ -6,10 +6,10 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF121212), // Siyah arka plan
+      backgroundColor: const Color(0xFF121212),
       appBar: AppBar(
         title: const Text('Keşfet'),
-        backgroundColor: const Color(0xFF1E1E1E), // Koyu AppBar
+        backgroundColor: const Color(0xFF1E1E1E),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -47,51 +47,11 @@ class SearchScreen extends StatelessWidget {
               ),
               style: const TextStyle(color: Colors.white),
             ),
-            const SizedBox(height: 30),
-
-            // Öne çıkan kategoriler
-            const Text(
-              'Öne Çıkan Kategoriler:',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
-            const SizedBox(height: 10),
-            Wrap(
-              spacing: 10,
-              runSpacing: 10,
-              children: [
-                Chip(
-                  label: const Text('Teknoloji'),
-                  backgroundColor: const Color.fromARGB(255, 99, 28, 28),
-                  labelStyle: const TextStyle(color: Colors.white),
-                ),
-                Chip(
-                  label: const Text('Bilim'),
-                  backgroundColor: const Color.fromARGB(255, 99, 28, 28),
-                  labelStyle: const TextStyle(color: Colors.white),
-                ),
-                Chip(
-                  label: const Text('Sanat'),
-                  backgroundColor: const Color.fromARGB(255, 99, 28, 28),
-                  labelStyle: const TextStyle(color: Colors.white),
-                ),
-                Chip(
-                  label: const Text('Eğlence'),
-                  backgroundColor: const Color.fromARGB(255, 99, 28, 28),
-                  labelStyle: const TextStyle(color: Colors.white),
-                ),
-              ],
-            ),
             const Spacer(),
-
-            // Ana Sayfaya dön butonu
             Center(
               child: ElevatedButton.icon(
                 onPressed: () {
-                  Navigator.pop(context); // Ana Sayfa'ya dön
+                  Navigator.pop(context);
                 },
                 icon: const Icon(Icons.arrow_back, color: Colors.white),
                 label: const Text('Ana Sayfaya Dön'),

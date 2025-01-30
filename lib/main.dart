@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:flutter_app/core/themes.dart';
+import 'package:flutter_app/screens/login_screen.dart';
+import 'package:flutter_app/screens/loading_screen.dart';
 import 'package:flutter_app/screens/home_screen.dart';
 
 void main() {
@@ -22,14 +25,33 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  // Sayfa yönlendirme ayarları
+  late final GoRouter _router = GoRouter(
+    initialLocation: '/login', // İlk açılışta Login sayfası açılacak
+    routes: [
+      GoRoute(
+        path: '/login',
+        builder: (context, state) => const LoginScreen(),
+      ),
+      GoRoute(
+        path: '/loading',
+        builder: (context, state) => const LoadingScreen(),
+      ),
+      GoRoute(
+        path: '/home',
+        builder: (context, state) => HomeScreen(toggleTheme: toggleTheme),
+      ),
+    ],
+  );
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
-      home: HomeScreen(toggleTheme: toggleTheme), // Burada fonksiyon geçildi
+      routerConfig: _router, // GoRouter kullanılıyor
     );
   }
 }
