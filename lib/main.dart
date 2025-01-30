@@ -1,24 +1,35 @@
 import 'package:flutter/material.dart';
-import 'routes/app_router.dart';
+import 'package:flutter_app/core/themes.dart';
+import 'package:flutter_app/screens/home_screen.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();  // Flutter widget'larını başlat
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool isDarkMode = false;
+
+  void toggleTheme() {
+    setState(() {
+      isDarkMode = !isDarkMode;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'Flutter App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      routerConfig: router,  // go_router yapılandırmamızı kullan
-      debugShowCheckedModeBanner: false,  // Debug bandını kaldır
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
+      home: HomeScreen(toggleTheme: toggleTheme), // Burada fonksiyon geçildi
     );
   }
-}                                            
+}
