@@ -109,14 +109,15 @@ class HomeScreen extends StatelessWidget {
                             children: [
                               gameInfo(
                                 title: 'Cyberpunk 2077: Phantom Liberty',
-                                description: 'Cyberpunk 2077\'nin yeni genişleme paketi...',
+                                description: 'Cyberpunk 2077\'nin yeni genişleme paketi Phantom Liberty, oyunculara yeni görevler, zenginleştirilmiş hikaye ve Dogtown adında yepyeni bir bölge sunuyor. Oyuncular, bu genişleme ile daha derin bir oyun deneyimi yaşayacaklar. Ayrıca, yeni karakter özelleştirmeleri ve iyileştirilmiş oyun mekaniği ile çok daha heyecanlı bir macera sizi bekliyor.',
+
                                 imagePath: 'lib/assets/images/cyberpunk2077.jpg',
                                 url: 'https://www.cyberpunk.net',
                                 isDarkMode: isDarkMode,
                               ),
                               gameInfo(
                                 title: 'Call of Duty Modern Warfare III',
-                                description: 'Call of Duty serisinin yeni oyunu...',
+                                description: 'Call of Duty serisinin yeni oyunu Modern Warfare III, aksiyon dolu haritalar ve heyecan verici çok oyunculu modlar sunuyor. Oyuncular, yeni haritalarda mücadele ederken, hikayenin derinliklerine inerek savaşın arkasındaki karanlık sırları keşfedecekler. Ayrıca yeni silahlar ve taktikler ile düşmanlarınızı alt edebilirsiniz.',
                                 imagePath: 'lib/assets/images/codmw3.jpg',
                                 url: 'https://www.callofduty.com',
                                 isDarkMode: isDarkMode,
